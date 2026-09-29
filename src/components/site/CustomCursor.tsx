@@ -27,7 +27,7 @@ export function CustomCursor() {
       target = { x: e.clientX, y: e.clientY };
       setActive(true);
       const el = (e.target as HTMLElement | null)?.closest?.("[data-cursor]") as HTMLElement | null;
-      setLabel(el?.dataset.cursor ?? null);
+      setLabel(el?.dataset["cursor"] ?? null);
     };
 
     const onLeave = () => setActive(false);
